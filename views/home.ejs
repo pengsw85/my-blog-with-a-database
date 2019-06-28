@@ -6,7 +6,7 @@
 <%  posts.forEach(function(post){ %>
 <div class="blog">
   <form action="/delete" method="POST">
-    <h1><%=post.title%> <button type="submit" name="delete" value="<%= post._id %>"><i
+    <h1><%=post.title%> <button type="submit" name="delete" value="<%= post._id %>" class="hidden"><i
           class="far fa-trash-alt"></i></button> </h1>
   </form>
 
@@ -15,9 +15,9 @@
     <a href="/posts/<%=post.id%>">Read More</a>
   </p>
 
-
-  <% }) %>
 </div>
+  <% }) %>
+
 
 
 

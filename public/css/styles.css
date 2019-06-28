@@ -46,6 +46,11 @@ button {
   font-size: 1.7rem;
 }
 
+.hidden {
+  display: hidden;
+}
+
+
 /* button {
   border: 0;
   background-color: rgba(0,0,0,0);
