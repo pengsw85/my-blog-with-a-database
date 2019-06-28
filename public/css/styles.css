@@ -46,10 +46,15 @@ button {
   font-size: 1.7rem;
 }
 
-.far {
-  
+/* button {
+  border: 0;
+  background-color: rgba(0,0,0,0);
+  float: right;
+  font-size: 1.7rem;
+  display: none;
 }
 
-.blog:hover {
-  
-}
+
+.blog:hover button {
+  display: inline
+} */
