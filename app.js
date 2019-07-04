@@ -21,7 +21,7 @@ app.use(express.static("public"));
 
 // ===================== mongoose set up =================================== //
 
-mongoose.connect("mongodb://localhost:27017/blogDB", {
+mongoose.connect("mongodb+srv://admin-SW:6QTleC5CxnHaHTj4@cluster0-va8sg.mongodb.net/test?retryWrites=true&w=majority", {
   useNewUrlParser: true
 });
 
@@ -39,11 +39,6 @@ const postSchema = new mongoose.Schema({
 })
 
 const Post = mongoose.model("Post", postSchema);
-
-const newpost = new Post({
-  title: "test2",
-  content: "asdsad"
-})
 
 
 
@@ -112,6 +107,11 @@ app.post("/delete", (req, res) => {
   
 })
 
-app.listen(3000, function () {
-  console.log("Server started on port 3000");
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port, function () {
+  console.log("Server started on port " + port);
 });
